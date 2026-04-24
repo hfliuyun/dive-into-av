@@ -109,13 +109,15 @@ jupyter notebook notebooks/
    - 确保实验能在3秒内完成
 
 5. **Git提交规范**
-   - 使用清晰的commit message
-   - 格式：`feat: 添加第X节 - 课程标题`
+   - 遵循 `CONTRIBUTING.md` 中的提交信息规范
+   - 格式：`<type>(<scope>): <subject>`（如 `feat(lesson): 添加第X节 - 课程标题`）
    - 每节课开发完成后提交一次
 
 6. **更新进度**
    - 在README.md中更新课程状态
    - 在COURSE_BLUEPRINT.md中更新进度追踪表
+   - 在PROGRESS.md中记录开发日志
+   - 在PROGRESS.md中记录开发日志
 
 ### 关键注意事项
 
@@ -129,6 +131,11 @@ jupyter notebook notebooks/
 - YUV格式注意平面和半平面区别
 - 时间戳处理注意time_base转换
 
+**Git提交规范：**
+- 遵循 `CONTRIBUTING.md` 中的提交信息规范
+- 使用规范的提交类型和范围
+- 提供详细的提交信息正文
+
 **错误处理：**
 - FFmpeg API调用必须检查返回值
 - 使用av_strerror获取错误信息
@@ -137,6 +144,19 @@ jupyter notebook notebooks/
 ## 技术栈
 - **基础实验篇**：Python + OpenCV + NumPy + Matplotlib + Jupyter
 - **工程实战篇**：C++17 + FFmpeg API + SDL2 + CMake
+
+## 📄 项目文档
+
+### 核心文档
+- [COURSE_BLUEPRINT.md](./COURSE_BLUEPRINT.md)：完整课程建设蓝图
+- [PROGRESS.md](./PROGRESS.md)：课程开发进度追踪
+- [CONTRIBUTING.md](./CONTRIBUTING.md)：Git提交规范和开发指南
+
+### 课程讲义
+- [docs/module1_basics/lesson01_pixel.md](./docs/module1_basics/lesson01_pixel.md)：第1节课讲义
+
+### 实验代码
+- [notebooks/module1/01_pixel_exploration.ipynb](./notebooks/module1/01_pixel_exploration.ipynb)：第1节课实验笔记本
 
 ## 许可证
 MIT License
