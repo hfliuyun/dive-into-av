@@ -24,6 +24,7 @@ wheels/
 venv/
 ENV/
 env/
+.venv/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -44,3 +45,14 @@ Thumbs.db
 output/
 assets/
 *.log
+
+# C++ build artifacts
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.o
+*.a
+*.exe
+*.out
+*.app
