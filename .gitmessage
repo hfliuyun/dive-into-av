@@ -1,0 +1,100 @@
+# Git Commit Message Template
+
+## Commit Message Format
+```
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
+
+## Available Types
+- **feat**: A new feature
+- **fix**: A bug fix
+- **docs**: Documentation only changes
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **perf**: A code change that improves performance
+- **test**: Adding missing tests or correcting existing tests
+- **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+- **ci**: Changes to CI configuration files and scripts
+- **build**: Changes that affect the build system or external dependencies
+
+## Available Scopes (for this project)
+- **lesson**: Course content development
+- **notebook**: Jupyter notebook changes
+- **docs**: Documentation changes
+- **assets**: Test assets management
+- **build**: Build configuration
+- **ci**: Continuous integration
+- **deps**: Dependency management
+
+## Subject Guidelines
+- Use imperative mood: "add" not "added" or "adds"
+- First letter lowercase
+- No period at the end
+- Max 50 characters
+
+## Body Guidelines (optional)
+- Explain WHAT and WHY, not HOW
+- Wrap at 72 characters
+- Use bullet points for lists
+
+## Footer Guidelines (optional)
+- Reference issue numbers: `Closes #123`, `Fixes #456`
+- Breaking changes: `BREAKING CHANGE: description`
+
+## Examples for This Project
+
+### New Course Lesson
+```
+feat(lesson): Add lesson 2 - Video color space
+
+- Implement RGB to YUV420P conversion
+- Add YUV component separation experiment
+- Include 3 challenge tasks
+
+Closes #2
+```
+
+### Documentation Update
+```
+docs: Update course development guide
+
+- Add memory management best practices
+- Update color space conversion notes
+- Fix typos in lesson templates
+```
+
+### Test Assets
+```
+chore(assets): Add test video for lesson 2
+
+- Download 5-second 360p test video
+- Verify video format and size
+- Update asset download script
+```
+
+### Bug Fix
+```
+fix(notebook): Fix color display issue in lesson 1
+
+- Correct BGR to RGB conversion
+- Update matplotlib display settings
+- Add color space conversion notes
+
+Fixes #15
+```
+
+## Validation Rules
+1. Type must be one of: feat, fix, docs, style, refactor, perf, test, chore, ci, build
+2. Scope must be one of: lesson, notebook, docs, assets, build, ci, deps (or empty)
+3. Subject must be <= 50 characters
+4. Subject must start with lowercase letter
+5. Subject must not end with period
+6. Body lines must be <= 72 characters (if provided)
+
+## Git Hook Configuration
+This template is used by the commit-msg hook to validate commit messages.
+To install the hook, run: `git config commit.template .gitmessage`

@@ -56,3 +56,10 @@ Makefile
 *.exe
 *.out
 *.app
+build/
+*.dylib
+*.so
+*.dll
+
+# Git hooks test files
+*.disabled

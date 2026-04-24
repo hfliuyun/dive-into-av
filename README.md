@@ -151,6 +151,11 @@ jupyter notebook notebooks/
 - [COURSE_BLUEPRINT.md](./COURSE_BLUEPRINT.md)：完整课程建设蓝图
 - [PROGRESS.md](./PROGRESS.md)：课程开发进度追踪
 - [CONTRIBUTING.md](./CONTRIBUTING.md)：Git提交规范和开发指南
+- [GIT_HOOKS.md](./GIT_HOOKS.md)：Git hooks配置和使用说明
+
+### Git配置
+- [.gitmessage](./.gitmessage)：提交信息模板文件
+- [.git/hooks/](./.git/hooks/)：Git hooks脚本目录
 
 ### 课程讲义
 - [docs/module1_basics/lesson01_pixel.md](./docs/module1_basics/lesson01_pixel.md)：第1节课讲义
