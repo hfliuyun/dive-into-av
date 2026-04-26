@@ -132,7 +132,7 @@
 conda create -n av-learn python=3.9
 conda activate av-learn
 conda install -c conda-forge av opencv numpy matplotlib pyaudio
-pip install pysoundfile pillow jupyter
+pip install soundfile pillow jupyter
 ```
 
 ### 4.2 工程实战篇（C/C++ + FFmpeg API）

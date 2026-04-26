@@ -120,16 +120,16 @@ pip install pyaudio
 ### 测试素材
 ```bash
 # 创建音频素材目录
-mkdir -p ../assets/audio
+mkdir -p assets/audio
 
 # 下载测试音频（5秒，44.1kHz，16位，立体声）
-wget https://filesamples.com/samples/audio/wav/sample1.wav -O ../assets/audio/test_stereo.wav
+wget https://filesamples.com/samples/audio/wav/sample1.wav -O assets/audio/test_stereo.wav
 
 # 下载不同采样率的测试音频
-wget https://filesamples.com/samples/audio/wav/sample2.wav -O ../assets/audio/test_mono.wav
+wget https://filesamples.com/samples/audio/wav/sample2.wav -O assets/audio/test_mono.wav
 
 # 验证音频信息
-ffprobe -v error -show_entries stream=sample_rate,channels,bits_per_sample -of default=noprint_wrappers=1 ../assets/audio/test_stereo.wav
+ffprobe -v error -show_entries stream=sample_rate,channels,bits_per_sample -of default=noprint_wrappers=1   assets/audio/test_stereo.wav
 ```
 
 ---
