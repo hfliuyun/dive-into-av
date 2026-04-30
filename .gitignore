@@ -65,5 +65,16 @@ build/
 *.disabled
 
 .codex
+
+# OpenCode local/private config
 opencode.json
+.env
+.opencode/local/
+.opencode/auth/
+.opencode/secrets/
+
+# Repository-level OpenCode rules are versioned:
+# - AGENTS.md
+# - .opencode/agents/**
+# - .opencode/skills/**
 
