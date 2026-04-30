@@ -43,7 +43,10 @@ Thumbs.db
 
 # Project specific
 output/
-assets/
+assets/*
+!assets/MANIFEST.md
+!assets/scripts/
+!assets/scripts/**
 *.log
 
 # C++ build artifacts
@@ -69,6 +72,8 @@ build/
 # OpenCode local/private config
 opencode.json
 .env
+.env.*
+!.env.example
 .opencode/local/
 .opencode/auth/
 .opencode/secrets/
@@ -77,4 +82,3 @@ opencode.json
 # - AGENTS.md
 # - .opencode/agents/**
 # - .opencode/skills/**
-
