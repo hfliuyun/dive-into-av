@@ -56,7 +56,7 @@ jupyter notebook notebooks/
 - 第7节：视频编码原理（DCT + 量化） ✅ 已完成
 - 第8节：H.264/H.265 关键概念 ✅ 已完成
 - 第9节：音频编码原理（AAC/MP3） ✅ 已完成
-- 第10节：FFmpeg 解码器API入门 ⏳ 待开发
+- 第10节：FFmpeg 解码器API入门 ✅ 已完成
 - 第11节：FFmpeg 内存模型与引用计数 ⏳ 待开发
 - 第12节：FFmpeg 编码器API入门 ⏳ 待开发
 
