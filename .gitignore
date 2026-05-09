@@ -72,6 +72,7 @@ opencode.json
 .opencode/local/
 .opencode/auth/
 .opencode/secrets/
+.opencode/node_modules/
 
 # Repository-level OpenCode rules are versioned:
 # - AGENTS.md
