@@ -58,7 +58,7 @@ jupyter notebook notebooks/
 - 第9节：音频编码原理（AAC/MP3） ✅ 已完成
 - 第10节：FFmpeg 解码器API入门 ✅ 已完成
 - 第11节：FFmpeg 内存模型与引用计数 ✅ 已完成
-- 第12节：FFmpeg 编码器API入门 ⏳ 待开发
+- 第12节：FFmpeg 编码器API入门 ✅ 已完成
 
 ### 模块三：音视频解封装、封装与处理管道
 - 第13节：解封装与封装API详解 ⏳ 待开发
