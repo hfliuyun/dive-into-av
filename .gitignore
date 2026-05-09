@@ -78,3 +78,5 @@ opencode.json
 # - .opencode/agents/**
 # - .opencode/skills/**
 
+.cache/
+.cache/

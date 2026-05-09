@@ -37,3 +37,9 @@ target_link_libraries(decode_pipeline
     ${AVFORMAT_LIBRARIES}
     ${AVUTIL_LIBRARIES}
 )
+
+target_link_directories(decode_pipeline PRIVATE
+    ${AVCODEC_LIBRARY_DIRS}
+    ${AVFORMAT_LIBRARY_DIRS}
+    ${AVUTIL_LIBRARY_DIRS}
+)
