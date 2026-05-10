@@ -64,8 +64,8 @@ jupyter notebook notebooks/
 - 第13节：解封装与封装API详解 ✅ 已完成
 - 第14节：解码管道构建 ✅ 已完成
 - 第15节：图像滤镜与转码 ✅ 已完成
-- 第16节：音频重采样与格式转换 ✅ 已完成
-- 第17节：转封装、流拷贝与精确剪辑 ⏳ 待开发
+- [第16节：音频重采样与格式转换](./docs/module3_pipeline/lesson16_audio_resample.md) ✅ 已完成
+- [第17节：转封装、流拷贝与精确剪辑](./docs/module3_pipeline/lesson17_remux_seek.md) ✅ 已完成
 - 第18节：阶段项目一：mini_ffmpeg ⏳ 待开发
 
 ### 模块四：音视频播放与同步
