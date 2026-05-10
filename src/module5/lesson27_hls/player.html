@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SDL Audio/Video HLS Player</title>
+    <!-- 引入 hls.js -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; background: #f0f0f0; }
+        video { width: 640px; height: 360px; background: #000; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        h1 { color: #333; }
+        .controls { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>HLS 直播/点播 实验演示</h1>
+    <video id="video" controls></video>
+    <div class="controls">
+        <p>正在播放: <span id="status">加载中...</span></p>
+    </div>
+
+    <script>
+        var video = document.getElementById('video');
+        var videoSrc = 'output/playlist.m3u8';
+        var status = document.getElementById('status');
+
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                status.innerText = videoSrc;
+                video.play();
+            });
+            hls.on(Hls.Events.ERROR, function (event, data) {
+                if (data.fatal) {
+                    status.innerText = "播放出错: " + data.type;
+                }
+            });
+        }
+        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            // 原生支持 (如 Safari)
+            video.src = videoSrc;
+            video.addEventListener('loadedmetadata', function() {
+                status.innerText = videoSrc;
+                video.play();
+            });
+        } else {
+            status.innerText = "浏览器不支持 HLS";
+        }
+    </script>
+</body>
+</html>

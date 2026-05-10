@@ -79,7 +79,7 @@ jupyter notebook notebooks/
 
 ### 模块五：流媒体基础与结课项目
 - [第26节：RTMP 推流与拉流](./docs/module5_streaming/lesson26_rtmp.md) ✅ 已完成
-- 第27节：HLS 切片与基础直播链路 ⏳ 待开发
+- [第27节：HLS 切片与基础直播链路](./docs/module5_streaming/lesson27_hls.md) ✅ 已完成
 
 ### 扩展专题
 - 专题A：WebRTC基础架构 ⏳ 待开发
