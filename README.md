@@ -69,7 +69,7 @@ jupyter notebook notebooks/
 - [第18节：阶段项目一：mini_ffmpeg](./docs/module3_pipeline/lesson18_mini_ffmpeg.md) ✅ 已完成
 
 ### 模块四：音视频播放与同步
-- 第19节：SDL2渲染基础 ⏳ 待开发
+- [第19节：SDL3 渲染基础](./docs/module4_player/lesson19_sdl_render.md) ✅ 已完成
 - 第20节：音频播放与回调机制 ⏳ 待开发
 - 第21节：视频播放循环 ⏳ 待开发
 - 第22节：线程模型与队列设计 ⏳ 待开发

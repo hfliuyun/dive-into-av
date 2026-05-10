@@ -75,7 +75,7 @@
 1. 用 Python 建立音视频数据直觉
 2. 用 FFmpeg CLI 建立媒体分析与排障能力
 3. 用 C++ + FFmpeg API 完成处理管道
-4. 用 SDL2 完成播放器主项目
+4. 用 SDL3 完成播放器主项目
 5. 用 RTMP/HLS 理解流媒体基本链路
 
 ---
@@ -147,7 +147,7 @@ pip install soundfile pillow jupyter
 **核心库：**
 
 - FFmpeg 开发库：`libavformat`、`libavcodec`、`libavutil`、`libswscale`、`libswresample`、`libavfilter`
-- SDL2
+- SDL3
 
 **Debug 模式启用 ASAN：**
 
@@ -308,7 +308,7 @@ sudo apt install ffmpeg libavcodec-dev libavformat-dev libavutil-dev \
 
 **目标：** 实现一个具备岗位代表性的基础播放器项目。
 
-- **第19节：SDL2 渲染基础**
+- **第19节：SDL3 渲染基础**
   - [核心概念] SDL 窗口、纹理、渲染循环、YUV 显示
   - [核心实验] 用 SDL 显示一张静态 YUV 图像
 
@@ -745,7 +745,7 @@ dive_into_media/
 | 模块三 | 第16节 | 音频重采样与格式转换 | ⏳ 待开发 | - |
 | 模块三 | 第17节 | 转封装、流拷贝与精确剪辑 | ⏳ 待开发 | - |
 | 模块三 | 第18节 | 阶段项目一：mini_ffmpeg | ⏳ 待开发 | - |
-| 模块四 | 第19节 | SDL2 渲染基础 | ⏳ 待开发 | - |
+| 模块四 | 第19节 | SDL3 渲染基础 | ⏳ 待开发 | - |
 | 模块四 | 第20节 | 音频播放与回调机制 | ⏳ 待开发 | - |
 | 模块四 | 第21节 | 视频播放循环 | ⏳ 待开发 | - |
 | 模块四 | 第22节 | 线程模型与队列设计 | ⏳ 待开发 | - |
