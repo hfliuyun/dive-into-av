@@ -74,7 +74,7 @@ jupyter notebook notebooks/
 - [第21节：视频播放循环](./docs/module4_player/lesson21_video_loop.md) ✅ 已完成
 - [第22节：线程模型与队列设计](./docs/module4_player/lesson22_thread_queue.md) ✅ 已完成
 - [第23节：音视频同步原理](./docs/module4_player/lesson23_av_sync.md) ✅ 已完成
-- 第24节：播放控制与播放器排障 ⏳ 待开发
+- [第24节：播放控制与播放器排障](./docs/module4_player/lesson24_control_debug.md) ✅ 已完成
 
 ### 模块五：流媒体基础与结课项目
 - 第25节：RTMP推流与拉流 ⏳ 待开发
