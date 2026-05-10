@@ -78,7 +78,7 @@ jupyter notebook notebooks/
 - [第25节：阶段项目二：mini_player](./docs/module4_player/project2_mini_player.md) ✅ 已完成
 
 ### 模块五：流媒体基础与结课项目
-- 第26节：RTMP 推流与拉流 ⏳ 待开发
+- [第26节：RTMP 推流与拉流](./docs/module5_streaming/lesson26_rtmp.md) ✅ 已完成
 - 第27节：HLS 切片与基础直播链路 ⏳ 待开发
 
 ### 扩展专题
