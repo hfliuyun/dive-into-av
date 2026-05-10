@@ -66,7 +66,7 @@ jupyter notebook notebooks/
 - 第15节：图像滤镜与转码 ✅ 已完成
 - [第16节：音频重采样与格式转换](./docs/module3_pipeline/lesson16_audio_resample.md) ✅ 已完成
 - [第17节：转封装、流拷贝与精确剪辑](./docs/module3_pipeline/lesson17_remux_seek.md) ✅ 已完成
-- 第18节：阶段项目一：mini_ffmpeg ⏳ 待开发
+- [第18节：阶段项目一：mini_ffmpeg](./docs/module3_pipeline/lesson18_mini_ffmpeg.md) ✅ 已完成
 
 ### 模块四：音视频播放与同步
 - 第19节：SDL2渲染基础 ⏳ 待开发
