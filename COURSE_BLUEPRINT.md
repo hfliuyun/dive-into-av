@@ -312,8 +312,8 @@ sudo apt install ffmpeg libavcodec-dev libavformat-dev libavutil-dev \
   - [核心概念] SDL 窗口、纹理、渲染循环、YUV 显示
   - [核心实验] 用 SDL 显示一张静态 YUV 图像
 
-- **第20节：音频播放与回调机制**
-  - [核心概念] SDL 音频设备、回调、缓冲区、欠载与过载
+- **第20节：音频播放与 AudioStream 机制**
+  - [核心概念] SDL3 音频设备、AudioStream、缓冲区、欠载与过载
   - [核心实验] 播放 PCM 音频文件
 
 - **第21节：视频播放循环**

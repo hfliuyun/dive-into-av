@@ -9,10 +9,10 @@
 - **主线课程数：** 26节
 - **扩展专题数：** 2个
 
-- **已完成主线：** 14节
+- **已完成主线：** 16节
 - **开发中：** 0节
-- **待开发主线：** 12节
-- **主线完成率：** 53.8%
+- **待开发主线：** 10节
+- **主线完成率：** 61.5%
 
 ---
 
@@ -27,7 +27,7 @@
 | 第3节 | 数字音频基础 | ✅ 已完成 | 2026-04-26 | 包含音频波形和频谱分析实验 |
 | 第4节 | 音视频容器格式与编解码 | ✅ 已完成 | 2026-05-08 | 包含容器/码流/编解码器概念和 ffprobe 分析实验 |
 | 第5节 | FFmpeg CLI 与媒体排查基础 | ✅ 已完成 | 2026-05-08 | 包含 ffmpeg/ffprobe/ffplay 使用和关键帧分析实验 |
-| 第6节 | 帧率、码率与时间戳 | ✅ 已完成 | 2026-05-08 | 包含 PTS/DTS 分析和 GOP 结构实验 |
+| 第6节 | 帧率、码率与时间戳 | ✅ 已完成 | 2026-05-08 | 包含 PTS/DTS 分析 and GOP 结构实验 |
 
 **模块一进度：** 6/6 (100%)
 
@@ -56,6 +56,7 @@
 | 第14节 | 解码管道构建 | ✅ 已完成 | 2026-05-09 | C++实现完整解码管道，支持 YUV/PCM 输出 |
 | 第15节 | 图像滤镜与转码 | ✅ 已完成 | 2026-05-09 | C++实现 libavfilter 滤镜图，支持缩放/水印/翻转并转码 |
 | 第16节 | 音频重采样与格式转换 | ✅ 已完成 | 2026-05-10 | C++实现 libswresample，支持采样率/声道/格式转换 |
+| 第17节 | 转封装、流拷贝与精确剪辑 | ✅ 已完成 | 2026-05-10 | 需要 stream copy 与 seek 实验 |
 | 第18节 | 阶段项目一：mini_ffmpeg | ✅ 已完成 | 2026-05-10 | 完成了探测/转封装/转码/重采样的整合工具 |
 
 **模块三进度：** 6/6 (100%)
@@ -67,13 +68,13 @@
 | 章节 | 标题 | 状态 | 完成日期 | 备注 |
 |------|------|------|----------|------|
 | 第19节 | SDL3 渲染基础 | ✅ 已完成 | 2026-05-10 | 需要 SDL3 环境，实现了 YUV 渲染与色彩空间显式管理 |
-| 第20节 | 音频播放与回调机制 | ⏳ 待开发 | - | SDL3 音频 API |
+| 第20节 | 音频播放与 AudioStream 机制 | ✅ 已完成 | 2026-05-10 | SDL3 音频流 API |
 | 第21节 | 视频播放循环 | ⏳ 待开发 | - | 帧率控制 |
 | 第22节 | 线程模型与队列设计 | ⏳ 待开发 | - | 播放器多线程结构设计 |
 | 第23节 | 音视频同步原理 | ⏳ 待开发 | - | 音频时钟同步 |
 | 第24节 | 播放控制与播放器排障 | ⏳ 待开发 | - | 暂停、seek、状态机与定位 |
 
-**模块四进度：** 1/6 (16.7%)
+**模块四进度：** 2/6 (33.3%)
 
 ---
 
@@ -99,21 +100,28 @@
 
 ## 🎯 下一节课程
 
-**第20节：音频播放与回调机制**
+**第21节：视频播放循环**
 
 **核心概念：**
-- SDL3 音频流 (Audio Stream)、回调、缓冲区、采样率匹配
+- 刷新节奏、帧率控制、SDL 刷新事件
 
 **核心实验：**
-- 播放 PCM 音频文件
+- 实现无音频的视频播放器
 
 **准备工作：**
-- [ ] 设计音频回调逻辑
-- [ ] 准备一段原始 PCM 素材
+- [ ] 设计基于 SDL_EVENT_USER 的定时器刷新
+- [ ] 准备视频测试帧
 
 ---
 
 ## 📝 开发日志
+
+### 2026-05-10
+- ✅ 完成第20节课：音频播放与 AudioStream 机制
+- ✅ 深入讲解 SDL3 最新的 `SDL_AudioStream` (Push/Pull) 架构，废弃回调模型以简化开发
+- ✅ 创建 C++ 示例代码（实现带节奏控制的 PCM 播放器）
+- ✅ 修复了播放结束时未等待缓冲区排空导致程序提前退出的问题
+- ✅ 模块四进度达到 33.3% (2/6)
 
 ### 2026-05-10
 - ✅ 完成第19节课：SDL3 渲染基础
@@ -134,11 +142,11 @@
 
 ### 2026-05-10
 - ✅ 完成第17节课：转封装、流拷贝与精确剪辑
-- ✅ 创建 libavfilter 滤镜图讲义（含 4 个核心概念 + 5 步构建流程）
-- ✅ 创建 C++ 滤镜转码管道代码（支持 scale/drawtext/hflip/vflip/自定义组合）
-- ✅ 添加滤镜图 flush 和 AV_BUFFERSRC_FLAG_KEEP_REF
-- ✅ 修复 FFmpeg 8.x macOS ARM64 编译问题（pixdesc.h + target_link_directories）
-- ✅ Reviewer 审查通过，修复全部 P0/P1/P2 问题（错别字、API 名称、滤镜图 flush、图片水印缺失）
+- ✅ 创建转封装 Seek 讲义（含 Stream Copy、Backward Seek、Timestamp Shifting 等核心概念）
+- ✅ 创建 C++ 剪辑工具代码（支持 fast 和 precise 两种模式，演示关键帧对剪辑的影响）
+- ✅ 修复资源释放逻辑（使用 goto end 统一清理）和色彩空间校验（仅支持 YUV420P）
+- ✅ Reviewer 审查通过，修复 P0 级内存泄漏与 API 返回值检查问题
+- ✅ 模块三进度达到 83.3% (5/6)
 
 ### 2026-05-10
 - ✅ 完成第16节课：音频重采样与格式转换
@@ -151,29 +159,37 @@
 - ✅ 模块三进度达到 50% (3:6)
 
 ### 2026-05-09
+- ✅ 完成第15节课：图像滤镜与转码
+- ✅ 创建 libavfilter 滤镜图讲义（含 4 个核心概念 + 5 步构建流程）
+- ✅ 创建 C++ 滤镜转码管道代码（支持 scale/drawtext/hflip/vflip/自定义组合）
+- ✅ 添加滤镜图 flush 和 AV_BUFFERSRC_FLAG_KEEP_REF
+- ✅ 修复 FFmpeg 8.x macOS ARM64 编译问题（pixdesc.h + target_link_directories）
+- ✅ Reviewer 审查通过，修复全部 P0/P1/P2 问题（错别字、API 名称、滤镜图 flush、图片水印缺失）
+
+### 2026-05-09
 - ✅ 完成第14节课：解码管道构建
 - ✅ 创建解码管道讲义（含 YUV420P 平面布局、planar/交错音频讲解）
 - ✅ 创建 MP4→YUV/PCM 解码管道 C++ 代码（main.cpp）
 - ✅ 参数接口改为命名参数（-y/-p）支持灵活指定输出
-- ✅ 添加 flush 阶段返回值检查和 YUV420P 像素格式警告
+- ✅ 添加 flush 阶段返回值检查 and YUV420P 像素格式警告
 - ✅ 添加 ASAN 环境变量说明（macOS detect_leaks=1）
-- ✅ 创建 CMakeLists.txt 和编译说明
-- ✅ Reviewer 审查通过，修复所有 P0 和 P2 问题
+- ✅ 创建 CMakeLists.txt and 编译说明
+- ✅ Reviewer 审查通过，修复所有 P0 and P2 问题
 - ✅ 模块三进度达到 33.3% (2/6)
 
 ### 2026-05-08
 - ✅ 完成第13节课：解封装与封装 API 详解
 - ✅ 创建解封装与封装讲义
 - ✅ 创建 H.264 裸流封装为 MP4 的 C++ 代码（mux.cpp）
-- ✅ 创建 CMakeLists.txt 和编译说明
-- ✅ 更新 README 和 PROGRESS 课程状态
+- ✅ 创建 CMakeLists.txt and 编译说明
+- ✅ 更新 README and PROGRESS 课程状态
 
 ### 2026-05-08
 - ✅ 完成第12节课：FFmpeg 编码器 API 入门
 - ✅ 创建 FFmpeg 编码器讲义
 - ✅ 创建 YUV 编码为 H.264 的 C++ 代码（main.cpp）
-- ✅ 创建 CMakeLists.txt 和编译说明
-- ✅ 更新 README 和 PROGRESS 课程状态
+- ✅ 创建 CMakeLists.txt and 编译说明
+- ✅ 更新 README and PROGRESS 课程状态
 - ✅ 模块二进度达到 100%
 
 ### 2026-05-08
@@ -181,53 +197,53 @@
 - ✅ 创建 FFmpeg 内存模型讲义
 - ✅ 创建引用计数演示程序（main.cpp）
 - ✅ 创建内存泄漏测试程序（leak_test.cpp）
-- ✅ 创建 CMakeLists.txt 和编译说明
-- ✅ 更新 README 和 PROGRESS 课程状态
+- ✅ 创建 CMakeLists.txt and 编译说明
+- ✅ 更新 README and PROGRESS 课程状态
 
 ### 2026-05-08
 - ✅ 完成第10节课：FFmpeg 解码器 API 入门
 - ✅ 创建 FFmpeg 解码器讲义
 - ✅ 创建最简视频解码器 C++ 代码（main.cpp）
-- ✅ 创建 CMakeLists.txt 和编译说明
-- ✅ 更新 README 和 PROGRESS 课程状态
+- ✅ 创建 CMakeLists.txt and 编译说明
+- ✅ 更新 README and PROGRESS 课程状态
 
 ### 2026-05-08
 - ✅ 完成第9节课：音频编码原理（AAC/MP3）
 - ✅ 创建音频编码原理讲义
 - ✅ 创建音频编码实验笔记本（09_audio_encoding.ipynb）
-- ✅ 更新 README 和 PROGRESS 课程状态
+- ✅ 更新 README and PROGRESS 课程状态
 
 ### 2026-05-08
 - ✅ 完成第8节课：H.264/H.265 关键概念
 - ✅ 创建 I/P/B 帧、GOP、NALU、SPS/PPS/IDR 讲义
 - ✅ 创建 H.264 分析实验笔记本（08_h264_analysis.ipynb）
-- ✅ 更新 README 和 PROGRESS 课程状态
+- ✅ 更新 README and PROGRESS 课程状态
 
 ### 2026-05-08
 - ✅ 完成第7节课：视频编码原理（DCT + 量化）
 - ✅ 创建 DCT 变换和量化讲义
 - ✅ 创建 DCT 实验笔记本（07_dct_experiment.ipynb）
-- ✅ 更新 README 和 PROGRESS 课程状态
+- ✅ 更新 README and PROGRESS 课程状态
 
 ### 2026-05-08
 - ✅ 完成第6节课：帧率、码率与时间戳
 - ✅ 创建时间戳分析讲义
 - ✅ 创建时间戳分析实验笔记本（06_timestamp_analysis.ipynb）
-- ✅ 更新 README 和 PROGRESS 课程状态
+- ✅ 更新 README and PROGRESS 课程状态
 - ✅ 模块一进度达到 100%
 
 ### 2026-05-08
 - ✅ 完成第5节课：FFmpeg CLI 与媒体排查基础
 - ✅ 创建 ffmpeg/ffprobe/ffplay 使用讲义
 - ✅ 创建 FFmpeg CLI 实验笔记本（05_ffmpeg_cli.ipynb）
-- ✅ 更新 README 和 PROGRESS 课程状态
+- ✅ 更新 README and PROGRESS 课程状态
 
 ### 2026-05-08
 - ✅ 完成第4节课：音视频容器格式与编解码
 - ✅ 创建容器/码流/编解码器概念讲义
 - ✅ 创建容器分析实验笔记本（04_container_analysis.ipynb）
 - ✅ 创建测试素材生成脚本
-- ✅ 更新 README 和 PROGRESS 课程状态
+- ✅ 更新 README and PROGRESS 课程状态
 
 ### 2026-04-25
 - ✅ 完成第2节课：视频的色彩空间
@@ -240,8 +256,8 @@
 ### 2026-04-24
 - ✅ 完成第1节课：数字图像基础
 - ✅ 创建课程蓝图文档（COURSE_BLUEPRINT.md）
-- ✅ 配置Git仓库和.gitignore
-- ✅ 创建项目README和开发指南
+- ✅ 配置Git仓库 and .gitignore
+- ✅ 创建项目README and 开发指南
 
 ### 高优先级
 - [ ] 开发第3节：数字音频基础

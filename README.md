@@ -70,7 +70,7 @@ jupyter notebook notebooks/
 
 ### 模块四：音视频播放与同步
 - [第19节：SDL3 渲染基础](./docs/module4_player/lesson19_sdl_render.md) ✅ 已完成
-- 第20节：音频播放与回调机制 ⏳ 待开发
+- [第20节：音频播放与 AudioStream 机制](./docs/module4_player/lesson20_audio_stream.md) ✅ 已完成
 - 第21节：视频播放循环 ⏳ 待开发
 - 第22节：线程模型与队列设计 ⏳ 待开发
 - 第23节：音视频同步原理 ⏳ 待开发
